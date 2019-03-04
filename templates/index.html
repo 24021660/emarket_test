@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/index" name="form1">
+    {% csrf_token %}
+    <input type="text" name="hide" hidden="True" value="1">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="email" name="email">
+    <input type="submit" value="提交">
+</form>
+<p>{{rlt}}</p>
+<form method="post" action="/index" name="form2">
+     {% csrf_token %}
+    <input type="text" name="hide" hidden="True" value="2">
+    <input type="text" name="login_username">
+    <input type="password" name="login_password">
+    <input type="submit" value="登录">
+</form>
+<p>{{m}}</p>
+</body>
+</html>
